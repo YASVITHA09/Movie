@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/seat_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header Section -->
+        <TextView
+            android:id="@+id/movieTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Your Seats"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true" />
+
+        <!-- Seat Rows -->
+        <LinearLayout
+            android:id="@+id/seatRowsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movieTitle"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_margin="5dp">
+
+                <Button
+                    android:id="@+id/seat_1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/seat_available"
+                    android:text="1" />
+                <Button
+                    android:id="@+id/seat_2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/seat_available"
+                    android:text="2" />
+                <Button
+                    android:id="@+id/seat_3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/seat_available"
+                    android:text="3" />
+                <Button
+                    android:id="@+id/seat_4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/seat_available"
+                    android:text="4" />
+                <Button
+                    android:id="@+id/seat_5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/a"
+                    android:text="5" />
+            </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_margin="5dp">
+
+                <Button
+                    android:id="@+id/seat_6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/seat_available"
+                    android:text="6" />
+                <Button
+                    android:id="@+id/seat_7"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/seat_available"
+                    android:text="7" />
+                <Button
+                    android:id="@+id/seat_8"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/seat_available"
+                    android:text="8" />
+                <Button
+                    android:id="@+id/seat_9"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/seat_available"
+                    android:text="9" />
+                <Button
+                    android:id="@+id/seat_10"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/seat_available"
+                    android:text="10" />
+            </LinearLayout>
+
+            <!-- Add more rows as needed -->
+
+        </LinearLayout>
+
+        <!-- Total Price Section -->
+        <LinearLayout
+            android:id="@+id/totalPriceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_below="@id/seatRowsLayout"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Price: ₹"
+                android:textSize="18sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/totalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="18sp"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <!-- Payment Section -->
+        <LinearLayout
+            android:id="@+id/paymentSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_below="@id/totalPriceLayout"
+            android:layout_marginTop="40dp">
+
+            <!-- Card Details -->
+            <EditText
+                android:id="@+id/cardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Card Number"
+                android:inputType="number"
+                android:layout_margin="10dp" />
+
+            <EditText
+                android:id="@+id/cardExpiry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Expiry Date (MM/YY)"
+                android:inputType="date"
+                android:layout_margin="10dp" />
+
+            <EditText
+                android:id="@+id/cardCvv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="CVV"
+                android:inputType="numberPassword"
+                android:layout_margin="10dp" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textSize="20sp"
+                android:background="@color/white"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
